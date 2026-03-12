@@ -1,16 +1,51 @@
-# React + Vite
+# PCA Visualizer
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+An interactive Principal Component Analysis (PCA) visualization built with React and Vite.
 
-Currently, two official plugins are available:
+🔗 **Live site:** https://sumuko98.github.io/PCA/
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+---
 
-## React Compiler
+## Deploying to GitHub Pages (one-time setup)
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+The repository already contains everything needed to deploy automatically. You just need to complete two steps in the GitHub UI.
 
-## Expanding the ESLint configuration
+### Step 1 — Merge the pull request
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+1. Go to the **Pull requests** tab in this repository
+2. Open the open pull request
+3. Click **"Merge pull request"** → **"Confirm merge"**
+
+This merges the deployment workflow into `main`.
+
+### Step 2 — Enable GitHub Pages
+
+> You do **not** need a custom domain. GitHub provides a free `github.io` URL automatically.
+
+1. Go to **Settings** (top-right of the repo page)
+2. In the left sidebar click **Pages**
+3. Under **"Build and deployment"**, set **Source** to **"GitHub Actions"**
+4. Click **Save**
+
+That's it! After merging the PR, the Actions workflow will run automatically and publish the site.  
+You can watch it run under the **Actions** tab. Once it finishes (usually ~1–2 minutes) the site will be live at:
+
+```
+https://sumuko98.github.io/PCA/
+```
+
+---
+
+## Local development
+
+```bash
+npm install
+npm run dev
+```
+
+## Build
+
+```bash
+npm run build        # output goes to dist/
+npm run preview      # preview the production build locally
+```
